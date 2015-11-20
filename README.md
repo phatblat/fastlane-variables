@@ -4,19 +4,144 @@ A list of all the environment variables used across the [Fastlane](https://fastl
 
 # [`fastlane`](https://github.com/fastlane/fastlane)
 # [`deliver`](https://github.com/fastlane/deliver)
+
+- DELIVER_USERNAME
+- DELIVER_APP_IDENTIFIER
+- DELIVER_APP_ID
+- DELIVER_IPA_PATH
+
 # [`snapshot`](https://github.com/fastlane/snapshot)
+
+- SNAPSHOT_WORKSPACE
+- SNAPSHOT_PROJECT
+- SNAPSHOT_OUTPUT_DIRECTORY
+- SNAPSHOT_BREAK_ON_FIRST_ERROR
+- SNAPSHOT_SKIP_OPEN_SUMMARY
+- SNAPSHOT_CLEAR_PREVIOUS_SCREENSHOTS
+- SNAPSHOT_BUILDLOG_PATH
+- SNAPSHOT_CLEAN
+- SNAPSHOT_CONFIGURATION
+- SNAPSHOT_SDK
+- SNAPSHOT_SCHEME
+
 # [`frameit`](https://github.com/fastlane/frameit)
+
+- FRAMEIT_WHITE_FRAME
+- FRAMEIT_SCREENSHOTS_PATH
+- FRAMEIT_FORCE_DEVICE_TYPE
+
 # [`pem`](https://github.com/fastlane/pem)
+
+- PEM_DEVELOPMENT
+- PEM_GENERATE_P12_FILE
+- PEM_FORCE
+- PEM_SAVE_PRIVATEKEY
+- PEM_APP_IDENTIFIER
+- PEM_USERNAME
+- PEM_TEAM_ID
+- PEM_TEAM_NAME
+- PEM_P12_PASSWORD
+- PEM_FILE_NAME
+- PEM_OUTPUT_PATH
+
 # [`sigh`](https://github.com/fastlane/sigh)
+
+- SIGH_AD_HOC
+- SIGH_SKIP_INSTALL
+- SIGH_DEVELOPMENT
+- SIGH_FORCE
+- SIGH_APP_IDENTIFIER
+- SIGH_USERNAME
+- SIGH_TEAM_ID
+- SIGH_TEAM_NAME
+- SIGH_PROVISIONING_PROFILE_NAME
+- SIGH_OUTPUT_PATH
+- SIGH_CERTIFICATE_ID
+- SIGH_CERTIFICATE
+- SIGH_PROFILE_FILE_NAME
+- SIGH_SKIP_FETCH_PROFILES
+- SIGH_SKIP_CERTIFICATE_VERIFICATION
+
 # [`produce`](https://github.com/fastlane/produce)
+
+- PRODUCE_USERNAME
+- PRODUCE_APP_IDENTIFIER
+- PRODUCE_APP_IDENTIFIER_SUFFIX
+- PRODUCE_APP_NAME
+- PRODUCE_VERSION
+- PRODUCE_SKU
+- PRODUCE_LANGUAGE
+- PRODUCE_COMPANY_NAME
+- PRODUCE_SKIP_ITC
+- PRODUCE_SKIP_DEVCENTER
+- PRODUCE_TEAM_ID
+- PRODUCE_TEAM_NAME
+
+## Output
+
+- `lane_context[SharedValues::PRODUCE_APPLE_ID]`
+
 # [`cert`](https://github.com/fastlane/cert)
-# [`codes`](https://github.com/fastlane/codes)
-# [`spaceship`](https://github.com/fastlane/spaceship)
+
+- CERT_DEVELOPMENT
+- CERT_FORCE
+- CERT_USERNAME
+- CERT_TEAM_ID
+- CERT_TEAM_NAME
+- CERT_OUTPUT_PATH
+- CERT_KEYCHAIN_PATH
+
 # [`pilot`](https://github.com/fastlane/pilot)
+
+- PILOT_USERNAME
+- PILOT_APP_IDENTIFIER
+- PILOT_IPA
+- PILOT_CHANGELOG
+- PILOT_SKIP_SUBMISSION
+- PILOT_APPLE_ID
+- PILOT_TESTER_FIRST_NAME
+- PILOT_TESTER_LAST_NAME
+- PILOT_TESTER_EMAIL
+- PILOT_TESTERS_FILE
+- PILOT_WAIT_PROCESSING_INTERVAL
+
 # [`boarding`](https://github.com/fastlane/boarding)
+
+## Required
+
+- ITC_USER iTunes Connect username
+- ITC_PASSWORD iTunes Connect password
+- ITC_APP_ID The Apple ID or Bundle Identifier of your app
+
+## Optional
+
+- ITC_TOKEN Set a password to protect your website from random people signing up
+- ITC_CLOSED_TEXT Set this text to temporary disable enrollment of new beta testers
+
 # [`gym`](https://github.com/fastlane/gym)
+
+- GYM_WORKSPACE
+- GYM_PROJECT
+- GYM_SCHEME
+- GYM_CLEAN
+- GYM_OUTPUT_DIRECTORY
+- GYM_OUTPUT_NAME
+- GYM_CONFIGURATION
+- GYM_SILENT
+- GYM_CODE_SIGNING_IDENTITY
+- GYM_INCLUDE_SYMBOLS
+- GYM_INCLUDE_BITCODE
+- GYM_USE_LEGACY_BUILD_API
+- GYM_EXPORT_METHOD
+- GYM_ARCHIVE_PATH
+- GYM_BUILDLOG_PATH
+- GYM_SDK
+- GYM_PROVISIONING_PROFILE_PATH
+- GYM_DESTINATION
+- GYM_EXPORT_TEAM_ID
+- GYM_XCARGS
+- GYM_XCCONFIG
 
 ## License
 
 This repo is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for rights and limitations.
-

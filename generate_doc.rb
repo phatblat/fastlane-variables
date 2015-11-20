@@ -26,16 +26,30 @@ end
 
 class Action
   attr_reader :name, :description, :author
+  attr_accessor :keys
   def initialize(name, description, author)
     @name = name
     @description = description
     @author = author
   end
   def url
+    #  ## [clipboard](https://github.com/fastlane/fastlane/blob/master/docs/Actions.md#clipboard)
     return "https://github.com/fastlane/fastlane/blob/master/docs/Actions.md##{name}"
   end
   def to_s
     return "#{@name}: #{@description} <#{@author}>"
+  end
+end
+
+class Key
+  attr_reader :key, :description, :env_var
+  def initialize(key, description, env_var)
+    @key = key
+    @description = description
+    @env_var = env_var
+  end
+  def to_s
+    return "#{@key}: #{@description} `#{@env_var}`"
   end
 end
 
@@ -47,15 +61,23 @@ end
 # | * value | The string that should be copied into the clipboard | FL_CLIPBOARD_VALUE |
 # +---------+-----------------------------------------------------+--------------------+
 actions.each do |action|
-  #  ## [clipboard](https://github.com/fastlane/fastlane/blob/master/docs/Actions.md#clipboard)
+  # puts action.name
 
-  # action = Action.new(name)
-  puts action
-  # output = `fastlane action #{name}`
-  # output.each_line do |line|
-  #   tokens = line.split('|')
-  #   if tokens.count == 5 && tokens[1].strip != 'Key'
-  #     actions.push tokens[1].strip
-  #   end
-  # end
+  action.keys = []
+  # puts "fastlane action #{action.name}"
+  output = `echo #{action.name}`
+  # puts output
+  # output = `fastlane action add_git_tag`
+  output.each_line do |line|
+    return if line.strip == "xctest\n" # "Couldn't find action for the given filter.\n"
+    puts "line: #{line}"
+
+    tokens = line.split('|')
+    if tokens.count == 5 && tokens[1].strip != 'Key'
+      action.keys.push Key.new(tokens[1].strip, tokens[2].strip, tokens[3].strip)
+    end
+  end
+
+  # action.keys.each do |key| puts key end
+  puts "-----\n"
 end
